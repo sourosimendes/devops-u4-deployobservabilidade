@@ -15,3 +15,4 @@ devops-u4-deployobservabilidade
 ├── Dockerfile
 ├── README.md
 └── Deploy_U4.docx
+Teste novo pipeline CI/CD
