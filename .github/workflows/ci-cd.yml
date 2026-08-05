@@ -43,3 +43,4 @@ jobs:
       - name: Construir imagem Docker
         run: |
           docker build -t api-devops .
+          # atualização do workflow
