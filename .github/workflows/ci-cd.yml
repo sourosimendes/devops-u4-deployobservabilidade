@@ -5,14 +5,9 @@ on:
     branches:
       - main
 
-  pull_request:
-    branches:
-      - main
-
 jobs:
 
   teste:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -34,3 +29,17 @@ jobs:
         run: |
           cd aplicacao
           npm test
+
+
+  docker:
+    needs: teste
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Baixar código
+        uses: actions/checkout@v4
+
+      - name: Construir imagem Docker
+        run: |
+          docker build -t api-devops .
